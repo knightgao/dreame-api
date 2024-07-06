@@ -2,10 +2,10 @@ package monitor
 
 import (
 	"fmt"
-	"github.com/songquanpeng/one-api/common/config"
-	"github.com/songquanpeng/one-api/common/logger"
-	"github.com/songquanpeng/one-api/common/message"
-	"github.com/songquanpeng/one-api/model"
+	"github.com/knightgao/dreame-api/common/config"
+	"github.com/knightgao/dreame-api/common/logger"
+	"github.com/knightgao/dreame-api/common/message"
+	"github.com/knightgao/dreame-api/model"
 )
 
 func notifyRootUser(subject string, content string) {

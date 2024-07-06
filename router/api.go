@@ -1,9 +1,9 @@
 package router
 
 import (
-	"github.com/songquanpeng/one-api/controller"
-	"github.com/songquanpeng/one-api/controller/auth"
-	"github.com/songquanpeng/one-api/middleware"
+	"github.com/knightgao/dreame-api/controller"
+	"github.com/knightgao/dreame-api/controller/auth"
+	"github.com/knightgao/dreame-api/middleware"
 
 	"github.com/gin-contrib/gzip"
 	"github.com/gin-gonic/gin"

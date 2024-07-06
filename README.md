@@ -4,7 +4,7 @@
 
 
 <p align="center">
-  <a href="https://github.com/songquanpeng/one-api"><img src="https://raw.githubusercontent.com/songquanpeng/one-api/main/web/default/public/logo.png" width="150" height="150" alt="one-api logo"></a>
+  <a href="https://github.com/knightgao/dreame-api"><img src="https://raw.githubusercontent.com/knightgao/dreame-api/main/web/default/public/logo.png" width="150" height="150" alt="dreame-api logo"></a>
 </p>
 
 <div align="center">
@@ -16,37 +16,37 @@ _✨ 通过标准的 OpenAI API 格式访问所有的大模型，开箱即用 �
 </div>
 
 <p align="center">
-  <a href="https://raw.githubusercontent.com/songquanpeng/one-api/main/LICENSE">
-    <img src="https://img.shields.io/github/license/songquanpeng/one-api?color=brightgreen" alt="license">
+  <a href="https://raw.githubusercontent.com/knightgao/dreame-api/main/LICENSE">
+    <img src="https://img.shields.io/github/license/knightgao/dreame-api?color=brightgreen" alt="license">
   </a>
-  <a href="https://github.com/songquanpeng/one-api/releases/latest">
-    <img src="https://img.shields.io/github/v/release/songquanpeng/one-api?color=brightgreen&include_prereleases" alt="release">
+  <a href="https://github.com/knightgao/dreame-api/releases/latest">
+    <img src="https://img.shields.io/github/v/release/knightgao/dreame-api?color=brightgreen&include_prereleases" alt="release">
   </a>
-  <a href="https://hub.docker.com/repository/docker/justsong/one-api">
-    <img src="https://img.shields.io/docker/pulls/justsong/one-api?color=brightgreen" alt="docker pull">
+  <a href="https://hub.docker.com/repository/docker/knightgao/dreame-api">
+    <img src="https://img.shields.io/docker/pulls/knightgao/dreame-api?color=brightgreen" alt="docker pull">
   </a>
-  <a href="https://github.com/songquanpeng/one-api/releases/latest">
-    <img src="https://img.shields.io/github/downloads/songquanpeng/one-api/total?color=brightgreen&include_prereleases" alt="release">
+  <a href="https://github.com/knightgao/dreame-api/releases/latest">
+    <img src="https://img.shields.io/github/downloads/knightgao/dreame-api/total?color=brightgreen&include_prereleases" alt="release">
   </a>
-  <a href="https://goreportcard.com/report/github.com/songquanpeng/one-api">
-    <img src="https://goreportcard.com/badge/github.com/songquanpeng/one-api" alt="GoReportCard">
+  <a href="https://goreportcard.com/report/github.com/knightgao/dreame-api">
+    <img src="https://goreportcard.com/badge/github.com/knightgao/dreame-api" alt="GoReportCard">
   </a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/songquanpeng/one-api#部署">部署教程</a>
+  <a href="https://github.com/knightgao/dreame-api#部署">部署教程</a>
   ·
-  <a href="https://github.com/songquanpeng/one-api#使用方法">使用方法</a>
+  <a href="https://github.com/knightgao/dreame-api#使用方法">使用方法</a>
   ·
-  <a href="https://github.com/songquanpeng/one-api/issues">意见反馈</a>
+  <a href="https://github.com/knightgao/dreame-api/issues">意见反馈</a>
   ·
-  <a href="https://github.com/songquanpeng/one-api#截图展示">截图展示</a>
+  <a href="https://github.com/knightgao/dreame-api#截图展示">截图展示</a>
   ·
   <a href="https://openai.justsong.cn/">在线演示</a>
   ·
-  <a href="https://github.com/songquanpeng/one-api#常见问题">常见问题</a>
+  <a href="https://github.com/knightgao/dreame-api#常见问题">常见问题</a>
   ·
-  <a href="https://github.com/songquanpeng/one-api#相关项目">相关项目</a>
+  <a href="https://github.com/knightgao/dreame-api#相关项目">相关项目</a>
   ·
   <a href="https://iamazing.cn/page/reward">赞赏支持</a>
 </p>
@@ -114,27 +114,27 @@ _✨ 通过标准的 OpenAI API 格式访问所有的大模型，开箱即用 �
     + 邮箱登录注册（支持注册邮箱白名单）以及通过邮箱进行密码重置。
     + 支持使用飞书进行授权登录。
     + [GitHub 开放授权](https://github.com/settings/applications/new)。
-    + 微信公众号授权（需要额外部署 [WeChat Server](https://github.com/songquanpeng/wechat-server)）。
+    + 微信公众号授权（需要额外部署 [WeChat Server](https://github.com/knightgao/wechat-server)）。
 23. 支持主题切换，设置环境变量 `THEME` 即可，默认为 `default`，欢迎 PR 更多主题，具体参考[此处](./web/README.md)。
-24. 配合 [Message Pusher](https://github.com/songquanpeng/message-pusher) 可将报警信息推送到多种 App 上。
+24. 配合 [Message Pusher](https://github.com/knightgao/message-pusher) 可将报警信息推送到多种 App 上。
 
 ## 部署
 ### 基于 Docker 进行部署
 ```shell
 # 使用 SQLite 的部署命令：
-docker run --name one-api -d --restart always -p 3000:3000 -e TZ=Asia/Shanghai -v /home/ubuntu/data/one-api:/data justsong/one-api
-# 使用 MySQL 的部署命令，在上面的基础上添加 `-e SQL_DSN="root:123456@tcp(localhost:3306)/oneapi"`，请自行修改数据库连接参数，不清楚如何修改请参见下面环境变量一节。
+docker run --name dreame-api -d --restart always -p 3000:3000 -e TZ=Asia/Shanghai -v /home/ubuntu/data/dreame-api:/data knightgao/dreame-api
+# 使用 MySQL 的部署命令，在上面的基础上添加 `-e SQL_DSN="root:123456@tcp(localhost:3306)/dreameapi"`，请自行修改数据库连接参数，不清楚如何修改请参见下面环境变量一节。
 # 例如：
-docker run --name one-api -d --restart always -p 3000:3000 -e SQL_DSN="root:123456@tcp(localhost:3306)/oneapi" -e TZ=Asia/Shanghai -v /home/ubuntu/data/one-api:/data justsong/one-api
+docker run --name dreame-api -d --restart always -p 3000:3000 -e SQL_DSN="root:123456@tcp(localhost:3306)/dreameapi" -e TZ=Asia/Shanghai -v /home/ubuntu/data/dreame-api:/data knightgao/dreame-api
 ```
 
 其中，`-p 3000:3000` 中的第一个 `3000` 是宿主机的端口，可以根据需要进行修改。
 
-数据和日志将会保存在宿主机的 `/home/ubuntu/data/one-api` 目录，请确保该目录存在且具有写入权限，或者更改为合适的目录。
+数据和日志将会保存在宿主机的 `/home/ubuntu/data/dreame-api` 目录，请确保该目录存在且具有写入权限，或者更改为合适的目录。
 
-如果启动失败，请添加 `--privileged=true`，具体参考 https://github.com/songquanpeng/one-api/issues/482 。
+如果启动失败，请添加 `--privileged=true`，具体参考 https://github.com/knightgao/dreame-api/issues/482 。
 
-如果上面的镜像无法拉取，可以尝试使用 GitHub 的 Docker 镜像，将上面的 `justsong/one-api` 替换为 `ghcr.io/songquanpeng/one-api` 即可。
+如果上面的镜像无法拉取，可以尝试使用 GitHub 的 Docker 镜像，将上面的 `knightgao/dreame-api` 替换为 `ghcr.io/knightgao/dreame-api` 即可。
 
 如果你的并发量较大，**务必**设置 `SQL_DSN`，详见下面[环境变量](#环境变量)一节。
 
@@ -186,24 +186,24 @@ docker-compose ps
 ```
 
 ### 手动部署
-1. 从 [GitHub Releases](https://github.com/songquanpeng/one-api/releases/latest) 下载可执行文件或者从源码编译：
+1. 从 [GitHub Releases](https://github.com/knightgao/dreame-api/releases/latest) 下载可执行文件或者从源码编译：
    ```shell
-   git clone https://github.com/songquanpeng/one-api.git
+   git clone https://github.com/knightgao/dreame-api.git
 
    # 构建前端
-   cd one-api/web/default
+   cd dreame-api/web/default
    npm install
    npm run build
 
    # 构建后端
    cd ../..
    go mod download
-   go build -ldflags "-s -w" -o one-api
+   go build -ldflags "-s -w" -o dreame-api
    ````
 2. 运行：
    ```shell
-   chmod u+x one-api
-   ./one-api --port 3000 --log-dir ./logs
+   chmod u+x dreame-api
+   ./dreame-api --port 3000 --log-dir ./logs
    ```
 3. 访问 [http://localhost:3000/](http://localhost:3000/) 并登录。初始账号用户名为 `root`，密码为 `123456`。
 
@@ -222,9 +222,9 @@ docker-compose ps
 
 ### 宝塔部署教程
 
-详见 [#175](https://github.com/songquanpeng/one-api/issues/175)。
+详见 [#175](https://github.com/knightgao/dreame-api/issues/175)。
 
-如果部署后访问出现空白页面，详见 [#97](https://github.com/songquanpeng/one-api/issues/97)。
+如果部署后访问出现空白页面，详见 [#97](https://github.com/knightgao/dreame-api/issues/97)。
 
 ### 部署第三方服务配合 One API 使用
 > 欢迎 PR 添加更多示例。
@@ -263,7 +263,7 @@ docker run --name chatgpt-web -d -p 3002:3002 -e OPENAI_API_BASE_URL=https://ope
 
 点击以下按钮一键部署（部署后访问出现 404 请等待 3~5 分钟）：
 
-[![Deploy-on-Sealos.svg](https://raw.githubusercontent.com/labring-actions/templates/main/Deploy-on-Sealos.svg)](https://cloud.sealos.io/?openapp=system-fastdeploy?templateName=one-api)
+[![Deploy-on-Sealos.svg](https://raw.githubusercontent.com/labring-actions/templates/main/Deploy-on-Sealos.svg)](https://cloud.sealos.io/?openapp=system-fastdeploy?templateName=dreame-api)
 
 </div>
 </details>
@@ -279,11 +279,11 @@ docker run --name chatgpt-web -d -p 3002:3002 -e OPENAI_API_BASE_URL=https://ope
 1. 首先 fork 一份代码。
 2. 进入 [Zeabur](https://zeabur.com?referralCode=songquanpeng)，登录，进入控制台。
 3. 新建一个 Project，在 Service -> Add Service 选择 Marketplace，选择 MySQL，并记下连接参数（用户名、密码、地址、端口）。
-4. 复制链接参数，运行 ```create database `one-api` ``` 创建数据库。
+4. 复制链接参数，运行 ```create database `dreame-api` ``` 创建数据库。
 5. 然后在 Service -> Add Service，选择 Git（第一次使用需要先授权），选择你 fork 的仓库。
-6. Deploy 会自动开始，先取消。进入下方 Variable，添加一个 `PORT`，值为 `3000`，再添加一个 `SQL_DSN`，值为 `<username>:<password>@tcp(<addr>:<port>)/one-api` ，然后保存。 注意如果不填写 `SQL_DSN`，数据将无法持久化，重新部署后数据会丢失。
+6. Deploy 会自动开始，先取消。进入下方 Variable，添加一个 `PORT`，值为 `3000`，再添加一个 `SQL_DSN`，值为 `<username>:<password>@tcp(<addr>:<port>)/dreame-api` ，然后保存。 注意如果不填写 `SQL_DSN`，数据将无法持久化，重新部署后数据会丢失。
 7. 选择 Redeploy。
-8. 进入下方 Domains，选择一个合适的域名前缀，如 "my-one-api"，最终域名为 "my-one-api.zeabur.app"，也可以 CNAME 自己的域名。
+8. 进入下方 Domains，选择一个合适的域名前缀，如 "my-dreame-api"，最终域名为 "my-dreame-api.zeabur.app"，也可以 CNAME 自己的域名。
 9. 等待部署完成，点击生成的域名进入 One API。
 
 </div>
@@ -348,9 +348,9 @@ graph LR
    + 例子：`SESSION_SECRET=random_string`
 3. `SQL_DSN`：设置之后将使用指定数据库而非 SQLite，请使用 MySQL 或 PostgreSQL。
    + 例子：
-     + MySQL：`SQL_DSN=root:123456@tcp(localhost:3306)/oneapi`
-     + PostgreSQL：`SQL_DSN=postgres://postgres:123456@localhost:5432/oneapi`（适配中，欢迎反馈）
-   + 注意需要提前建立数据库 `oneapi`，无需手动建表，程序将自动建表。
+     + MySQL：`SQL_DSN=root:123456@tcp(localhost:3306)/dreameapi`
+     + PostgreSQL：`SQL_DSN=postgres://postgres:123456@localhost:5432/dreameapi`（适配中，欢迎反馈）
+   + 注意需要提前建立数据库 `dreameapi`，无需手动建表，程序将自动建表。
    + 如果使用本地数据库：部署命令可添加 `--network="host"` 以使得容器内的程序可以访问到宿主机上的 MySQL。
    + 如果使用云数据库：如果云服务器需要验证身份，需要在连接参数中添加 `?tls=skip-verify`。
    + 请根据你的数据库配置修改下列参数（或者保持默认值）：
@@ -437,7 +437,7 @@ https://openai.justsong.cn
    + 上游渠道 429 了。
 7. 升级之后我的数据会丢失吗？
    + 如果使用 MySQL，不会。
-   + 如果使用 SQLite，需要按照我所给的部署命令挂载 volume 持久化 one-api.db 数据库文件，否则容器重启后数据会丢失。
+   + 如果使用 SQLite，需要按照我所给的部署命令挂载 volume 持久化 dreame-api.db 数据库文件，否则容器重启后数据会丢失。
 8. 升级之前数据库需要做变更吗？
    + 一般情况下不需要，系统将在初始化的时候自动调整。
    + 如果需要的话，我会在更新日志中说明，并给出脚本。

@@ -3,12 +3,12 @@ package model
 import (
 	"errors"
 	"fmt"
-	"github.com/songquanpeng/one-api/common"
-	"github.com/songquanpeng/one-api/common/blacklist"
-	"github.com/songquanpeng/one-api/common/config"
-	"github.com/songquanpeng/one-api/common/helper"
-	"github.com/songquanpeng/one-api/common/logger"
-	"github.com/songquanpeng/one-api/common/random"
+	"github.com/knightgao/dreame-api/common"
+	"github.com/knightgao/dreame-api/common/blacklist"
+	"github.com/knightgao/dreame-api/common/config"
+	"github.com/knightgao/dreame-api/common/helper"
+	"github.com/knightgao/dreame-api/common/logger"
+	"github.com/knightgao/dreame-api/common/random"
 	"gorm.io/gorm"
 	"strings"
 )

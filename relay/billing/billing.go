@@ -3,8 +3,8 @@ package billing
 import (
 	"context"
 	"fmt"
-	"github.com/songquanpeng/one-api/common/logger"
-	"github.com/songquanpeng/one-api/model"
+	"github.com/knightgao/dreame-api/common/logger"
+	"github.com/knightgao/dreame-api/model"
 )
 
 func ReturnPreConsumedQuota(ctx context.Context, preConsumedQuota int64, tokenId int) {

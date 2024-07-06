@@ -3,7 +3,7 @@ package helper
 import (
 	"fmt"
 	"github.com/gin-gonic/gin"
-	"github.com/songquanpeng/one-api/common/random"
+	"github.com/knightgao/dreame-api/common/random"
 	"html/template"
 	"log"
 	"net"

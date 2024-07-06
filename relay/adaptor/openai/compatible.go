@@ -1,18 +1,18 @@
 package openai
 
 import (
-	"github.com/songquanpeng/one-api/relay/adaptor/ai360"
-	"github.com/songquanpeng/one-api/relay/adaptor/baichuan"
-	"github.com/songquanpeng/one-api/relay/adaptor/deepseek"
-	"github.com/songquanpeng/one-api/relay/adaptor/doubao"
-	"github.com/songquanpeng/one-api/relay/adaptor/groq"
-	"github.com/songquanpeng/one-api/relay/adaptor/lingyiwanwu"
-	"github.com/songquanpeng/one-api/relay/adaptor/minimax"
-	"github.com/songquanpeng/one-api/relay/adaptor/mistral"
-	"github.com/songquanpeng/one-api/relay/adaptor/moonshot"
-	"github.com/songquanpeng/one-api/relay/adaptor/stepfun"
-	"github.com/songquanpeng/one-api/relay/adaptor/togetherai"
-	"github.com/songquanpeng/one-api/relay/channeltype"
+	"github.com/knightgao/dreame-api/relay/adaptor/ai360"
+	"github.com/knightgao/dreame-api/relay/adaptor/baichuan"
+	"github.com/knightgao/dreame-api/relay/adaptor/deepseek"
+	"github.com/knightgao/dreame-api/relay/adaptor/doubao"
+	"github.com/knightgao/dreame-api/relay/adaptor/groq"
+	"github.com/knightgao/dreame-api/relay/adaptor/lingyiwanwu"
+	"github.com/knightgao/dreame-api/relay/adaptor/minimax"
+	"github.com/knightgao/dreame-api/relay/adaptor/mistral"
+	"github.com/knightgao/dreame-api/relay/adaptor/moonshot"
+	"github.com/knightgao/dreame-api/relay/adaptor/stepfun"
+	"github.com/knightgao/dreame-api/relay/adaptor/togetherai"
+	"github.com/knightgao/dreame-api/relay/channeltype"
 )
 
 var CompatibleChannels = []int{

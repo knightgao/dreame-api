@@ -5,8 +5,8 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
-	"github.com/songquanpeng/one-api/common/ctxkey"
-	"github.com/songquanpeng/one-api/relay/adaptor/openai"
+	"github.com/knightgao/dreame-api/common/ctxkey"
+	"github.com/knightgao/dreame-api/relay/adaptor/openai"
 	"io"
 	"net/http"
 
@@ -16,11 +16,11 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/jinzhu/copier"
 	"github.com/pkg/errors"
-	"github.com/songquanpeng/one-api/common"
-	"github.com/songquanpeng/one-api/common/helper"
-	"github.com/songquanpeng/one-api/common/logger"
-	"github.com/songquanpeng/one-api/relay/adaptor/anthropic"
-	relaymodel "github.com/songquanpeng/one-api/relay/model"
+	"github.com/knightgao/dreame-api/common"
+	"github.com/knightgao/dreame-api/common/helper"
+	"github.com/knightgao/dreame-api/common/logger"
+	"github.com/knightgao/dreame-api/relay/adaptor/anthropic"
+	relaymodel "github.com/knightgao/dreame-api/relay/model"
 )
 
 func wrapErr(err error) *relaymodel.ErrorWithStatusCode {

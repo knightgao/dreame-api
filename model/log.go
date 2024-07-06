@@ -3,10 +3,10 @@ package model
 import (
 	"context"
 	"fmt"
-	"github.com/songquanpeng/one-api/common"
-	"github.com/songquanpeng/one-api/common/config"
-	"github.com/songquanpeng/one-api/common/helper"
-	"github.com/songquanpeng/one-api/common/logger"
+	"github.com/knightgao/dreame-api/common"
+	"github.com/knightgao/dreame-api/common/config"
+	"github.com/knightgao/dreame-api/common/helper"
+	"github.com/knightgao/dreame-api/common/logger"
 	"gorm.io/gorm"
 )
 

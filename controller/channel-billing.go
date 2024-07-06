@@ -4,12 +4,12 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"github.com/songquanpeng/one-api/common/client"
-	"github.com/songquanpeng/one-api/common/config"
-	"github.com/songquanpeng/one-api/common/logger"
-	"github.com/songquanpeng/one-api/model"
-	"github.com/songquanpeng/one-api/monitor"
-	"github.com/songquanpeng/one-api/relay/channeltype"
+	"github.com/knightgao/dreame-api/common/client"
+	"github.com/knightgao/dreame-api/common/config"
+	"github.com/knightgao/dreame-api/common/logger"
+	"github.com/knightgao/dreame-api/model"
+	"github.com/knightgao/dreame-api/monitor"
+	"github.com/knightgao/dreame-api/relay/channeltype"
 	"io"
 	"net/http"
 	"strconv"
@@ -18,7 +18,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-// https://github.com/songquanpeng/one-api/issues/79
+// https://github.com/knightgao/dreame-api/issues/79
 
 type OpenAISubscriptionResponse struct {
 	Object             string  `json:"object"`

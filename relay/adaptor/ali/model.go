@@ -1,8 +1,8 @@
 package ali
 
 import (
-	"github.com/songquanpeng/one-api/relay/adaptor/openai"
-	"github.com/songquanpeng/one-api/relay/model"
+	"github.com/knightgao/dreame-api/relay/adaptor/openai"
+	"github.com/knightgao/dreame-api/relay/model"
 )
 
 type Message struct {

@@ -1,6 +1,6 @@
 package channeltype
 
-import "github.com/songquanpeng/one-api/relay/apitype"
+import "github.com/knightgao/dreame-api/relay/apitype"
 
 func ToAPIType(channelType int) int {
 	apiType := apitype.OpenAI

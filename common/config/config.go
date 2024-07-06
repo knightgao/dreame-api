@@ -1,7 +1,7 @@
 package config
 
 import (
-	"github.com/songquanpeng/one-api/common/env"
+	"github.com/knightgao/dreame-api/common/env"
 	"os"
 	"strconv"
 	"strings"

@@ -3,10 +3,10 @@ package middleware
 import (
 	"fmt"
 	"github.com/gin-gonic/gin"
-	"github.com/songquanpeng/one-api/common/ctxkey"
-	"github.com/songquanpeng/one-api/common/logger"
-	"github.com/songquanpeng/one-api/model"
-	"github.com/songquanpeng/one-api/relay/channeltype"
+	"github.com/knightgao/dreame-api/common/ctxkey"
+	"github.com/knightgao/dreame-api/common/logger"
+	"github.com/knightgao/dreame-api/model"
+	"github.com/knightgao/dreame-api/relay/channeltype"
 	"net/http"
 	"strconv"
 )

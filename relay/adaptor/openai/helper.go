@@ -2,8 +2,8 @@ package openai
 
 import (
 	"fmt"
-	"github.com/songquanpeng/one-api/relay/channeltype"
-	"github.com/songquanpeng/one-api/relay/model"
+	"github.com/knightgao/dreame-api/relay/channeltype"
+	"github.com/knightgao/dreame-api/relay/model"
 	"strings"
 )
 

@@ -1,9 +1,9 @@
 package model
 
 import (
-	"github.com/songquanpeng/one-api/common/config"
-	"github.com/songquanpeng/one-api/common/logger"
-	billingratio "github.com/songquanpeng/one-api/relay/billing/ratio"
+	"github.com/knightgao/dreame-api/common/config"
+	"github.com/knightgao/dreame-api/common/logger"
+	billingratio "github.com/knightgao/dreame-api/relay/billing/ratio"
 	"strconv"
 	"strings"
 	"time"

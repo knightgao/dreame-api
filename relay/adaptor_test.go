@@ -2,7 +2,7 @@ package relay
 
 import (
 	. "github.com/smartystreets/goconvey/convey"
-	"github.com/songquanpeng/one-api/relay/apitype"
+	"github.com/knightgao/dreame-api/relay/apitype"
 	"testing"
 )
 

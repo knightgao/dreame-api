@@ -8,7 +8,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"github.com/songquanpeng/one-api/common/render"
+	"github.com/knightgao/dreame-api/common/render"
 	"io"
 	"net/http"
 	"strconv"
@@ -16,14 +16,14 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
-	"github.com/songquanpeng/one-api/common"
-	"github.com/songquanpeng/one-api/common/conv"
-	"github.com/songquanpeng/one-api/common/helper"
-	"github.com/songquanpeng/one-api/common/logger"
-	"github.com/songquanpeng/one-api/common/random"
-	"github.com/songquanpeng/one-api/relay/adaptor/openai"
-	"github.com/songquanpeng/one-api/relay/constant"
-	"github.com/songquanpeng/one-api/relay/model"
+	"github.com/knightgao/dreame-api/common"
+	"github.com/knightgao/dreame-api/common/conv"
+	"github.com/knightgao/dreame-api/common/helper"
+	"github.com/knightgao/dreame-api/common/logger"
+	"github.com/knightgao/dreame-api/common/random"
+	"github.com/knightgao/dreame-api/relay/adaptor/openai"
+	"github.com/knightgao/dreame-api/relay/constant"
+	"github.com/knightgao/dreame-api/relay/model"
 )
 
 func ConvertRequest(request model.GeneralOpenAIRequest) *ChatRequest {
