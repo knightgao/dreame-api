@@ -18,10 +18,6 @@ var (
 )
 
 func printHelp() {
-	fmt.Println("Dreame API " + Version + " - All in Dreame API service for OpenAI API.")
-	fmt.Println("Copyright (C) 2023 JustSong. All rights reserved.")
-	fmt.Println("GitHub: https://github.com/knightgao/dreame-api")
-	fmt.Println("Usage: dreame-api [--port <port>] [--log-dir <log directory>] [--version] [--help]")
 }
 
 func Init() {

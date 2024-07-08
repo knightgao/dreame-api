@@ -274,7 +274,7 @@ const EditChannel = () => {
                 <Form.Input
                   label='Base URL'
                   name='base_url'
-                  placeholder={'请输入自定义渠道的 Base URL，例如：https://openai.justsong.cn'}
+                  placeholder={'请输入自定义渠道的 Base URL，例如：https://openai.com'}
                   onChange={handleInputChange}
                   value={inputs.base_url}
                   autoComplete='new-password'

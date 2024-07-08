@@ -114,7 +114,6 @@ const OtherSetting = () => {
       <Grid.Column>
         <Form loading={loading}>
           <Header as='h3'>通用设置</Header>
-          <Form.Button onClick={checkUpdate}>检查更新</Form.Button>
           <Form.Group widths='equal'>
             <Form.TextArea
               label='公告'
@@ -138,17 +137,7 @@ const OtherSetting = () => {
             />
           </Form.Group>
           <Form.Button onClick={submitSystemName}>设置系统名称</Form.Button>
-          <Form.Group widths='equal'>
-            <Form.Input
-              label={<label>主题名称（<Link
-                to='https://github.com/knightgao/dreame-api/blob/main/web/README.md'>当前可用主题</Link>）</label>}
-              placeholder='请输入主题名称'
-              value={inputs.Theme}
-              name='Theme'
-              onChange={handleInputChange}
-            />
-          </Form.Group>
-          <Form.Button onClick={submitTheme}>设置主题（重启生效）</Form.Button>
+        
           <Form.Group widths='equal'>
             <Form.Input
               label='Logo 图片地址'

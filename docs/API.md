@@ -1,17 +1,8 @@
 # 使用 API 操控 & 扩展 Dreame API
-> 欢迎提交 PR 在此放上你的拓展项目。
 
 例如，虽然 Dreame API 本身没有直接支持支付，但是你可以通过系统扩展的 API 来实现支付功能。
 
 又或者你想自定义渠道管理策略，也可以通过 API 来实现渠道的禁用与启用。
-
-## 鉴权
-Dreame API 支持两种鉴权方式：Cookie 和 Token，对于 Token，参照下图获取：
-
-![image](https://github.com/knightgao/songquanpeng.github.io/assets/39998050/c15281a7-83ed-47cb-a1f6-913cb6bf4a7c)
-
-之后，将 Token 作为请求头的 Authorization 字段的值即可，例如下面使用 Token 调用测试渠道的 API：
-![image](https://github.com/knightgao/songquanpeng.github.io/assets/39998050/1273b7ae-cb60-4c0d-93a6-b1cbc039c4f8)
 
 ## 请求格式与响应格式
 Dreame API 使用 JSON 格式进行请求和响应。
