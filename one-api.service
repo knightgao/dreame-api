@@ -4,7 +4,7 @@
 # sudo systemctl enable dreame-api
 # sudo systemctl status dreame-api
 [Unit]
-Description=One API Service
+Description=Dreame API Service
 After=network.target
 
 [Service]

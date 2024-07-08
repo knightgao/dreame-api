@@ -9,7 +9,7 @@
 
 <div align="center">
 
-# One API
+# Dreame API
 
 _✨ 通过标准的 OpenAI API 格式访问所有的大模型，开箱即用 ✨_
 
@@ -108,7 +108,7 @@ _✨ 通过标准的 OpenAI API 格式访问所有的大模型，开箱即用 �
 19. 支持丰富的**自定义**设置，
     1. 支持自定义系统名称，logo 以及页脚。
     2. 支持自定义首页和关于页面，可以选择使用 HTML & Markdown 代码进行自定义，或者使用一个单独的网页通过 iframe 嵌入。
-20. 支持通过系统访问令牌调用管理 API，进而**在无需二开的情况下扩展和自定义** One API 的功能，详情请参考此处 [API 文档](./docs/API.md)。。
+20. 支持通过系统访问令牌调用管理 API，进而**在无需二开的情况下扩展和自定义** Dreame API 的功能，详情请参考此处 [API 文档](./docs/API.md)。。
 21. 支持 Cloudflare Turnstile 用户校验。
 22. 支持用户管理，支持**多种用户登录注册方式**：
     + 邮箱登录注册（支持注册邮箱白名单）以及通过邮箱进行密码重置。
@@ -226,7 +226,7 @@ docker-compose ps
 
 如果部署后访问出现空白页面，详见 [#97](https://github.com/knightgao/dreame-api/issues/97)。
 
-### 部署第三方服务配合 One API 使用
+### 部署第三方服务配合 Dreame API 使用
 > 欢迎 PR 添加更多示例。
 
 #### ChatGPT Next Web
@@ -250,7 +250,7 @@ docker run --name chatgpt-web -d -p 3002:3002 -e OPENAI_API_BASE_URL=https://ope
 #### QChatGPT - QQ机器人
 项目主页：https://github.com/RockChinQ/QChatGPT
 
-根据文档完成部署后，在`config.py`设置配置项`openai_config`的`reverse_proxy`为 One API 后端地址，设置`api_key`为 One API 生成的key，并在配置项`completion_api_params`的`model`参数设置为 One API 支持的模型名称。
+根据文档完成部署后，在`config.py`设置配置项`openai_config`的`reverse_proxy`为 Dreame API 后端地址，设置`api_key`为 Dreame API 生成的key，并在配置项`completion_api_params`的`model`参数设置为 Dreame API 支持的模型名称。
 
 可安装 [Switcher 插件](https://github.com/RockChinQ/Switcher)在运行时切换所使用的模型。
 
@@ -284,7 +284,7 @@ docker run --name chatgpt-web -d -p 3002:3002 -e OPENAI_API_BASE_URL=https://ope
 6. Deploy 会自动开始，先取消。进入下方 Variable，添加一个 `PORT`，值为 `3000`，再添加一个 `SQL_DSN`，值为 `<username>:<password>@tcp(<addr>:<port>)/dreame-api` ，然后保存。 注意如果不填写 `SQL_DSN`，数据将无法持久化，重新部署后数据会丢失。
 7. 选择 Redeploy。
 8. 进入下方 Domains，选择一个合适的域名前缀，如 "my-dreame-api"，最终域名为 "my-dreame-api.zeabur.app"，也可以 CNAME 自己的域名。
-9. 等待部署完成，点击生成的域名进入 One API。
+9. 等待部署完成，点击生成的域名进入 Dreame API。
 
 </div>
 </details>
@@ -312,9 +312,9 @@ Render 可以直接部署 docker 镜像，不需要 fork 仓库：https://dashbo
 ## 使用方法
 在`渠道`页面中添加你的 API Key，之后在`令牌`页面中新增访问令牌。
 
-之后就可以使用你的令牌访问 One API 了，使用方式与 [OpenAI API](https://platform.openai.com/docs/api-reference/introduction) 一致。
+之后就可以使用你的令牌访问 Dreame API 了，使用方式与 [OpenAI API](https://platform.openai.com/docs/api-reference/introduction) 一致。
 
-你需要在各种用到 OpenAI API 的地方设置 API Base 为你的 One API 的部署地址，例如：`https://openai.justsong.cn`，API Key 则为你在 One API 中生成的令牌。
+你需要在各种用到 OpenAI API 的地方设置 API Base 为你的 Dreame API 的部署地址，例如：`https://openai.justsong.cn`，API Key 则为你在 Dreame API 中生成的令牌。
 
 注意，具体的 API Base 的格式取决于你所使用的客户端。
 
@@ -327,7 +327,7 @@ OPENAI_API_BASE="https://<HOST>:<PORT>/v1"
 ```mermaid
 graph LR
     A(用户)
-    A --->|使用 One API 分发的 key 进行请求| B(One API)
+    A --->|使用 Dreame API 分发的 key 进行请求| B(Dreame API)
     B -->|中继请求| C(OpenAI)
     B -->|中继请求| D(Azure)
     B -->|中继请求| E(其他 OpenAI API 格式下游渠道)
@@ -340,7 +340,7 @@ graph LR
 不加的话将会使用负载均衡的方式使用多个渠道。
 
 ### 环境变量
-> One API 支持从 `.env` 文件中读取环境变量，请参照 `.env.example` 文件，使用时请将其重命名为 `.env`。
+> Dreame API 支持从 `.env` 文件中读取环境变量，请参照 `.env.example` 文件，使用时请将其重命名为 `.env`。
 1. `REDIS_CONN_STRING`：设置之后将使用 Redis 作为缓存使用。
    + 例子：`REDIS_CONN_STRING=redis://default:redispw@localhost:49153`
    + 如果数据库访问延迟很低，没有必要启用 Redis，启用后反而会出现数据滞后的问题。
@@ -390,7 +390,7 @@ graph LR
 20. `USER_CONTENT_REQUEST_PROXY`：设置后使用该代理来请求用户上传的内容，例如图片。
 21. `SQLITE_BUSY_TIMEOUT`：SQLite 锁等待超时设置，单位为毫秒，默认 `3000`。
 22. `GEMINI_SAFETY_SETTING`：Gemini 的安全设置，默认 `BLOCK_NONE`。
-23. `GEMINI_VERSION`：One API 所使用的 Gemini 版本，默认为 `v1`。
+23. `GEMINI_VERSION`：Dreame API 所使用的 Gemini 版本，默认为 `v1`。
 24. `THEME`：系统的主题设置，默认为 `default`，具体可选值参考[此处](./web/README.md)。
 25. `ENABLE_METRIC`：是否根据请求成功率禁用渠道，默认不开启，可选值为 `true` 和 `false`。
 26. `METRIC_QUEUE_SIZE`：请求成功率统计队列大小，默认为 `10`。
@@ -415,11 +415,11 @@ https://openai.justsong.cn
 ![token](https://user-images.githubusercontent.com/39998050/233837971-dab488b7-6d96-43af-b640-a168e8d1c9bf.png)
 
 ## 常见问题
-1. 额度是什么？怎么计算的？One API 的额度计算有问题？
+1. 额度是什么？怎么计算的？Dreame API 的额度计算有问题？
    + 额度 = 分组倍率 * 模型倍率 * （提示 token 数 + 补全 token 数 * 补全倍率）
    + 其中补全倍率对于 GPT3.5 固定为 1.33，GPT4 为 2，与官方保持一致。
    + 如果是非流模式，官方接口会返回消耗的总 token，但是你要注意提示和补全的消耗倍率不一样。
-   + 注意，One API 的默认倍率就是官方倍率，是已经调整过的。
+   + 注意，Dreame API 的默认倍率就是官方倍率，是已经调整过的。
 2. 账户额度足够为什么提示额度不足？
    + 请检查你的令牌额度是否足够，这个和账户额度是分开的。
    + 令牌额度仅供用户设置最大使用量，用户可自由设置。

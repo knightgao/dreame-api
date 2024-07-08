@@ -8,7 +8,7 @@
 
 <div align="center">
 
-# One API
+# Dreame API
 
 _✨ Access all LLM through the standard OpenAI API format, easy to deploy & use ✨_
 
@@ -199,7 +199,7 @@ If you encounter a blank page after deployment, refer to [#97](https://github.co
 6. Automatic deployment will start, but please cancel it for now. Go to the Variable tab, add a `PORT` with a value of `3000`, and then add a `SQL_DSN` with a value of `<username>:<password>@tcp(<addr>:<port>)/dreame-api`. Save the changes. Please note that if `SQL_DSN` is not set, data will not be persisted, and the data will be lost after redeployment.
 7. Select Redeploy.
 8. In the Domains tab, select a suitable domain name prefix, such as "my-dreame-api". The final domain name will be "my-dreame-api.zeabur.app". You can also CNAME your own domain name.
-9. Wait for the deployment to complete, and click on the generated domain name to access One API.
+9. Wait for the deployment to complete, and click on the generated domain name to access Dreame API.
 
 </div>
 </details>
@@ -214,16 +214,16 @@ After the system starts, log in as the `root` user to further configure the syst
 ## Usage
 Add your API Key on the `Channels` page, and then add an access token on the `Tokens` page.
 
-You can then use your access token to access One API. The usage is consistent with the [OpenAI API](https://platform.openai.com/docs/api-reference/introduction).
+You can then use your access token to access Dreame API. The usage is consistent with the [OpenAI API](https://platform.openai.com/docs/api-reference/introduction).
 
-In places where the OpenAI API is used, remember to set the API Base to your One API deployment address, for example: `https://openai.justsong.cn`. The API Key should be the token generated in One API.
+In places where the OpenAI API is used, remember to set the API Base to your Dreame API deployment address, for example: `https://openai.justsong.cn`. The API Key should be the token generated in Dreame API.
 
 Note that the specific API Base format depends on the client you are using.
 
 ```mermaid
 graph LR
     A(User)
-    A --->|Request| B(One API)
+    A --->|Request| B(Dreame API)
     B -->|Relay Request| C(OpenAI)
     B -->|Relay Request| D(Azure)
     B -->|Relay Request| E(Other downstream channels)
@@ -269,7 +269,7 @@ If the channel ID is not provided, load balancing will be used to distribute the
 ![token](https://user-images.githubusercontent.com/39998050/233837971-dab488b7-6d96-43af-b640-a168e8d1c9bf.png)
 
 ## FAQ
-1. What is quota? How is it calculated? Does One API have quota calculation issues?
+1. What is quota? How is it calculated? Does Dreame API have quota calculation issues?
     + Quota = Group multiplier * Model multiplier * (number of prompt tokens + number of completion tokens * completion multiplier)
     + The completion multiplier is fixed at 1.33 for GPT3.5 and 2 for GPT4, consistent with the official definition.
     + If it is not a stream mode, the official API will return the total number of tokens consumed. However, please note that the consumption multipliers for prompts and completions are different.
