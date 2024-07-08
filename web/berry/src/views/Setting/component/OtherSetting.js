@@ -129,11 +129,6 @@ const OtherSetting = () => {
         <SubCard title="通用设置">
           <Grid container spacing={{ xs: 3, sm: 2, md: 4 }}>
             <Grid xs={12}>
-              <Button variant="contained" onClick={checkUpdate}>
-                检查更新
-              </Button>
-            </Grid>
-            <Grid xs={12}>
               <FormControl fullWidth>
                 <TextField
                   multiline
@@ -174,25 +169,6 @@ const OtherSetting = () => {
             <Grid xs={12}>
               <Button variant="contained" onClick={submitSystemName}>
                 设置系统名称
-              </Button>
-            </Grid>
-            <Grid xs={12}>
-              <FormControl fullWidth>
-                <InputLabel htmlFor="Theme">主题名称</InputLabel>
-                <OutlinedInput
-                    id="Theme"
-                    name="Theme"
-                    value={inputs.Theme || ''}
-                    onChange={handleInputChange}
-                    label="主题名称"
-                    placeholder="请输入主题名称"
-                    disabled={loading}
-                />
-              </FormControl>
-            </Grid>
-            <Grid xs={12}>
-              <Button variant="contained" onClick={submitTheme}>
-                设置主题（重启生效）
               </Button>
             </Grid>
             <Grid xs={12}>
